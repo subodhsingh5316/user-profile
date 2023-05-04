@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.inter-Dasborard{
+  display: flex;
+  flex-direction: row;
+}
+.aside-container{
+  margin-top: 1%;
+  border: 1px solid grey;
+  width:'20%'
+}
+
+.dashBoard{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  height: 50vh;
+  justify-content: space-around;
+  align-items: center;
+}
+.dashBoard>div{
+  width:25%;
+  height: 25vh;
+  background-color: aquamarine;
+  color: white;
+  text-align: center;
+  padding-top: 5% ;
+  justify-content: center;
+  box-shadow: 5px 10px #cceeff;
+  margin: 2%;
+}
+

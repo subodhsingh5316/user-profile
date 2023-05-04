@@ -1,0 +1,203 @@
+{
+  "posts": [
+    {
+      "name": "subodh ray",
+      "status": false,
+      "courseName": "React-js-1",
+      "author": "Munsi premchand-1",
+      "price": 125,
+      "lesson": [
+        {
+          "unit_no": 1,
+          "lessonName": "thbherf",
+          "detail": "asfd",
+          "lessonStatus": false,
+          "lesson_id": 1
+        },
+        {
+          "unit_no": 2,
+          "lessonName": "thbherf",
+          "detail": "asfd",
+          "lessonStatus": false,
+          "lesson_id": 2
+        }
+      ],
+      "quantity": 8,
+      "id": 1
+    },
+    {
+      "name": "subodh ray",
+      "status": false,
+      "courseName": "React-js-1",
+      "author": "Munsi premchand-1",
+      "price": 125,
+      "lesson": [
+        {
+          "unit_no": 2,
+          "lessonName": "thbherf",
+          "detail": "asfd",
+          "lessonStatus": false,
+          "lesson_id": 2
+        }
+      ],
+      "quantity": 8,
+      "id": 2
+    },
+    {
+      "status": true,
+      "name": "subodh ray",
+      "courseName": "React Native-ios",
+      "author": "Kazim",
+      "price": 200,
+      "lesson": [
+        {
+          "unit_no": 3,
+          "lessonName": " introducton React",
+          "detail": "React-app is single page application",
+          "lessonStatus": false,
+          "lesson_id": 3
+        }
+      ],
+      "quantity": 15,
+      "id": 3
+    },
+    {
+      "name": "subodh ray",
+      "status": false,
+      "courseName": "React Native",
+      "author": "Kazim",
+      "price": 200,
+      "lesson": [
+        {
+          "unit_no": 4,
+          "lessonName": " introducton React",
+          "detail": "React-app is single page application",
+          "lessonStatus": false,
+          "lesson_id": 4
+        }
+      ],
+      "quantity": 15,
+      "id": 4
+    },
+    {
+      "name": "subodh ray",
+      "status": false,
+      "courseName": "English",
+      "author": "SAPANA singh",
+      "price": 120,
+      "lesson": [
+        {
+          "unit_no": 5,
+          "lessonName": " introducton React",
+          "detail": "React-app is single page application",
+          "lessonStatus": false,
+          "lesson_id": 5
+        }
+      ],
+      "quantity": 9,
+      "id": 5
+    },
+    {
+      "name": "subodh ray",
+      "status": false,
+      "courseName": "Css",
+      "author": "Bahubali",
+      "price": 20,
+      "lesson": [
+        {
+          "unit_no": 6,
+          "lessonName": " introducton React",
+          "detail": "React-app is single page application",
+          "lessonStatus": false,
+          "lesson_id": 6
+        }
+      ],
+      "quantity": 5,
+      "id": 6
+    }
+  ],
+  "comments": [],
+  "quarry": [
+    {
+      "id": 1,
+      "internQuarry": "some quarry"
+    },
+    {
+      "internQuarry": "I am subodh",
+      "id": 2
+    },
+    {
+      "internQuarry": "I am not able to hear you",
+      "id": 3
+    }
+  ],
+  "register": [
+    {
+      "file": "C:\\fakepath\\WhatsApp Image 2023-04-22 at 10.31.27.jpeg",
+      "name": "subodh Ray",
+      "role": 1,
+      "email": "Subodh@aa.com",
+      "password": "Subodh@123",
+      "confirm_password": "Subodh@123",
+      "username": "subodh1",
+      "id": 1
+    },
+    {
+      "file": "C:\\fakepath\\WhatsApp Image 2023-04-22 at 10.31.27.jpeg",
+      "name": "Pramod Ray",
+      "role": 2,
+      "email": "Pramod@aa.com",
+      "password": "Pramod@123",
+      "confirm_password": "Pramod@123",
+      "username": "Pramod1",
+      "id": 2
+    },
+    {
+      "file": "C:\\fakepath\\WhatsApp Image 2023-04-22 at 10.31.27.jpeg",
+      "name": "Pramod Ray",
+      "role": 3,
+      "email": "Pramod@aa.com",
+      "password": "Pramod@123",
+      "confirm_password": "Pramod@123",
+      "username": "Pramod1",
+      "id": 3
+    }
+  ],
+  "profile": [
+    {
+      "name": "typicode"
+    }
+  ],
+  "trainer": [
+    {
+      "name": "subodh ray",
+      "courseName": "React-js-1",
+      "author": "Munsi premchand-1",
+      "price": 125,
+      "lesson": [
+        {
+          "unit_no": "1",
+          "lessonName": "thbherf",
+          "detail": "asfd"
+        }
+      ],
+      "quantity": 8,
+      "id": 1
+    },
+    {
+      "name": "subodh ray",
+      "courseName": "React-js-1",
+      "author": "Munsi premchand-1",
+      "price": 125,
+      "lesson": [
+        {
+          "unit_no": 2,
+          "lessonName": "asdasd",
+          "detail": "asff"
+        }
+      ],
+      "quantity": 8,
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+let setFlag = [
+    {
+        id: 1,
+        courseName: reactjs
+    }
+]
+
+component
+    (data , falge, func(data));
+
+    if(let data i fag))
