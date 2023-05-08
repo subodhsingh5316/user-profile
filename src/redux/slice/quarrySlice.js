@@ -13,18 +13,26 @@ export  const fetchQuarryData = createAsyncThunk(
 export const quarrySlice = createSlice({
     name: 'intern',
     initialState:{
-        quarry:[]
+        quarry:[],
+        loading:false,
+        error:false
     },
     reducers: {},
     extraReducers: (builder) => {
       builder.addCase(fetchQuarryData.pending, (state, action) => {
-        state.quarry.push(action.payload)
+        state.loading = true;
+        state.error = false;
+        state.quarry = []
       })
       builder.addCase(fetchQuarryData.fulfilled, (state, action) => {
-        state.quarry.push(action.payload)
+        state.quarry = action.payload
+        state.error = false;
+        state.loading = false;
       })
       builder.addCase(fetchQuarryData.rejected, (state, action) => {
-        state.quarry.push(action.payload)
+        state.error = action.payload;
+        state.quarry = [];
+        state.loading = false;
       })
     },
   })

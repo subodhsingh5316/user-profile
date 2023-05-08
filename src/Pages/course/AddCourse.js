@@ -17,8 +17,7 @@ const AddCourse = () => {
         courseName: '',
         author: '',
         lesson:[],
-        price: '',
-        quantity: 1
+        price: ''
     })
     const handleAdd =()=>{
         setLessonInput([...lessonInput,{
@@ -57,8 +56,7 @@ const AddCourse = () => {
                 lessonName:'',
                 detail:''
             }],
-            price: '',
-            quantity: 1,
+            price: ''
         })
         }
     }
@@ -85,10 +83,6 @@ const AddCourse = () => {
                         <Form.Group className="mb-3" controlId="price">
                             <Form.Label>price</Form.Label>
                             <Form.Control type="name" placeholder="Enter price" name='price' value={courseData.price} onChange={handleOnchange} />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="quantity">
-                            <Form.Label>quantity</Form.Label>
-                            <Form.Control type="name" placeholder="Enter quantity" name='quantity' value={courseData.quantity} onChange={handleOnchange} />
                         </Form.Group>
                         <Button variant="primary" type="submit">
                             Submit

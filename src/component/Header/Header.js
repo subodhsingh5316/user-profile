@@ -23,7 +23,7 @@ const Header = (props) => {
   const [items, setItems] = useState()
   const [imgUrl, setImgUrl] = useState('');
   const [preview, setPreview] = useState(null);
-  const { data, HeaderData, QuarryModal, search, handleserchChange } = props
+  const { data, HeaderData,HeaderDataTrain, QuarryModal, search, handleserchChange } = props
   console.log(search)
   
   const navigate = useNavigate()
@@ -39,10 +39,10 @@ const Header = (props) => {
     // nevigate('/') email_verified
     // window.location.href('/')
     googleLogout()
-    navigate('/login')
+    window.location.href = window.location.origin+ '/login'
     // localStorage.removeItem("userData")
     localStorage.clear()
-    window.location.reload()
+    // window.location.reload()
   }
   return (
     <Navbar bg="info" expand="lg" className='mb-4'>
@@ -56,18 +56,21 @@ const Header = (props) => {
             aria-describedby="basic-addon2"
             value={search}
             onChange={(e) => { handleserchChange(e) }}
+            onkeydown={()=>{}}
           />
           <InputGroup.Text id="basic-addon2"><i className='fa fa-search'></i></InputGroup.Text>
         </InputGroup>
         {HeaderData && (
           <Nav.Link href="/add-course">
-            <h5 style={{ color: 'grey' }}>{HeaderData}</h5>
+            <strong style={{ color: 'grey' }}>{HeaderData}</strong>
           </Nav.Link>
         )}
         {data && (
-          <Nav.Link onClick={QuarryModal}>
-            <h5 style={{ color: 'grey' }}>{data}</h5>
+          <>
+            <Nav.Link onClick={QuarryModal}>
+            <strong style={{ color: 'grey' }}>{data}</strong>
           </Nav.Link>
+          </>
         )}
         <div className='d-flex justify-content-end'>
           <Navbar.Collapse id="basic-navbar-nav ">
@@ -75,7 +78,12 @@ const Header = (props) => {
               {
                items && items.length > 0 ? (
                 <> 
-                 { items[0]?.email_verified == true &&(<Avatar alt="Remy Sharp" src={items[0]?.picture} />)}
+                 { items[0]?.email_verified == true?(
+                 <Avatar alt={items[0]?.name}  src={items[0]?.picture} />
+                 ):(
+                  <Avatar alt={items[0]?.name} src='subodh.jpg' />
+                 )
+                 }
                   
                   <Dropdown>
                     <Dropdown.Toggle variant="info" id="dropdown-basic">

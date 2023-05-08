@@ -3,7 +3,7 @@ import { Button, Table } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import axios from 'axios'
 const TableComponent = (props) => {
-  const { data, column, handleDelete, flag  } = props 
+  const { data, column, handleDelete, flag ,Courseflag } = props 
   console.log(flag)
   return (
     <div>
@@ -27,20 +27,22 @@ const TableComponent = (props) => {
                   <td>{i+1}</td>
                   <td>{item.courseName}</td>
                   <td>{item.author}</td>
-                  <td>{item.price}</td>
-                  <td>
-                  <Link to = {`/view-course/${item.id}`}>
-                    <Button variant="outline-info" >
-                      <i className='fa fa-eye'></i>
-                    </Button>
-                    </Link>
-                    <Link to ={`/editcourse/${item.id}`}>
-                    <Button variant='outline-primary'style={{marginLeft:'20px'}}>
-                      <i className='ml-3 fa fa-edit'></i>
-                      </Button>
-                    </Link>
-                    <Button variant='outline-danger'style={{marginLeft:'20px'}} disabled={item.status} onClick={(e)=>{handleDelete(item.id)}} ><i className='fa fa-trash'></i></Button>
-                  </td>
+                 {!Courseflag &&(<td>{item.price}</td>)}
+                  {
+                    !Courseflag  &&(<td>
+                      <Link to = {`/view-course/${item.id}`}>
+                        <Button variant="outline-info" >
+                          <i className='fa fa-eye'></i>
+                        </Button>
+                        </Link>
+                        <Link to ={`/editcourse/${item.id}`}>
+                        <Button variant='outline-primary'style={{marginLeft:'20px'}}>
+                          <i className='ml-3 fa fa-edit'></i>
+                          </Button>
+                        </Link>
+                        <Button variant='outline-danger'style={{marginLeft:'20px'}} disabled={item.status} onClick={(e)=>{handleDelete(item.id)}} ><i className='fa fa-trash'></i></Button>
+                      </td>)
+                  }
                   </tr>
               )
             })

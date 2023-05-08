@@ -23,8 +23,7 @@ const EditCourse = () => {
             lessonName:'',
             detail:''
         }],
-        price:'',
-        quantity:1
+        price:''
     })
     let  userId  = useParams();
     const nevigate = useNavigate()
@@ -85,8 +84,7 @@ const EditCourse = () => {
                 lessonName:'',
                 detail:''
             }],
-            price:'',
-            quantity:''
+            price:''
         })
     }
 
@@ -137,10 +135,6 @@ const EditCourse = () => {
                         <Form.Group className="mb-3" controlId="price">
                             <Form.Label>price</Form.Label>
                             <Form.Control type="name" placeholder="Enter price"  name='price' defaultValue={courseData.price} onChange={handleOnchange}/>
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="quantity">
-                            <Form.Label>quantity</Form.Label>
-                            <Form.Control type="name" placeholder="Enter quantity"  name='quantity' defaultValue={courseData.quantity} onChange={handleOnchange}/>
                         </Form.Group>
                         <Button variant="primary" type="submit" >
                             Submit

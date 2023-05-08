@@ -13,7 +13,9 @@ export default function DefaultPage(){
                 <LinkContainer to='/login'>
                 <div><h4>Admin</h4></div>
                 </LinkContainer>
+                <LinkContainer to={`/login`}>
                 <div><h4>Trainer</h4></div>
+                </LinkContainer>
                 <LinkContainer to='/login'>
                 <div><h4>Intern</h4></div>
                 </LinkContainer>

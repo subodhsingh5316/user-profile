@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import React,{Suspense, lazy } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './component/Header/Header';
 import AddCourse from './Pages/course/AddCourse';
 import Dashboard from './Pages/Dasboard/Dashboard';
 import Login from './component/Login/Login';
 import Register from './component/Register/Register';
-import TableComponent from './component/Table/TableComponent';
 import { Routes, Route } from 'react-router-dom';
 import DefaultPage from './Pages/defaultPage';
 import EditCourse from './Pages/course/EditCourse';
-import AdminDasboard from './Pages/Dasboard/AdminDasboard';
+import AdminDasboard from './Pages/Dasboard/Admin/AdminDasboard';
 import ViewCourse from './Pages/course/ViewCourse';
-import Intern from './Pages/Dasboard/Intern';
+import Intern from './Pages/Dasboard/Intern/Intern';
 import TrainerDasbord from './Pages/Dasboard/TrainerDasbord';
 import EditProfile from './component/Register/EditProfile';
+import CartCourse from './Pages/course/CartCourse';
 // import * as Sentry from "@sentry/react";
 
 function App() {
+// const AddCourse = lazy(() => import('../Pages/course/AddCourse'));
   // Sentry.init({
   //   dsn: "https://<key>@sentry.io/<project>"
   // });
@@ -37,10 +37,9 @@ function App() {
         <Route exact path='/add-course' element={<AddCourse/>}/>
         <Route exact path='/dashboard' element={<Dashboard />}/>
         <Route exact path='/view-course/:id' element={<ViewCourse/>}/>
+        <Route exact path='/cart-course/:id' element={<CartCourse/>}/>
         {/* <Route exact path='/dashboard' element={<TableComponent/>}/> */}
       </Routes>
-     
-     
     </div>
   );
 }

@@ -20,6 +20,7 @@ const Login = () => {
   const [state, seState] = useState("login")
   const [userData,setUserData] = useState()
   const navigate = useNavigate()
+ 
 
   const handleOnchange = (e) => {
     const { name, value } = e.target
@@ -33,6 +34,7 @@ const Login = () => {
     }
     return false
   }
+  // useEffect(()=>{ recaptcha.reset()},[])
   function onChange(value) {
     console.log("Captcha value:", value);
     setVerified(true)
@@ -73,7 +75,9 @@ const Login = () => {
   //   });
   //   localStorage.setItem('state', JSON.stringify(state))
   // }, []);
-
+   useEffect(()=>{
+    localStorage.clear();
+   },[])
 
   const handleOnsubmit = (e) => {
     e.preventDefault()
@@ -82,7 +86,7 @@ const Login = () => {
       fetch('http://localhost:3001/register')
         .then(res => res.json())
         .then(result => {
-          const findresult = result.filter(item => item.email === loginData.email && item.password === loginData.password);
+          const findresult = result.filter(item => item.email === loginData.email && item.password === loginData.password );
           console.log(findresult)
           if (findresult.length > 0) {
             setUserData("role",findresult)
@@ -93,10 +97,12 @@ const Login = () => {
               navigate('/admin-dashboard')
             }
             if (role === 2) {
+              localStorage.setItem('userData', JSON.stringify(findresult))
               localStorage.setItem('isTrainee',true)
               navigate('/trainer-dashboard')
             }
             if (role === 3) {
+              localStorage.setItem('userData', JSON.stringify(findresult))
               localStorage.setItem('isIntern',true)
               navigate('/intern-dashboard')
             }
@@ -112,7 +118,10 @@ const Login = () => {
     }
 
   }
-
+ const reCaptchaCallback=()=>{
+  // var widgetId = grecaptcha.render(container);
+  //   grecaptcha.reset(widgetId);
+ }
   console.log("--->user",userData)
 
   return (
@@ -134,6 +143,9 @@ const Login = () => {
               <ReCAPTCHA
                 sitekey="6Lcss84eAAAAAMlhIpC5eekQlbdIUsMnaGrK-Q9Z"
                 onChange={onChange}
+                render="explicit" 
+                onloadCallback={reCaptchaCallback}
+                
               />
             </Form.Group>
             {/* <Form.Group>

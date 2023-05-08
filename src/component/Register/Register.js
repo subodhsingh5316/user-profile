@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import PhotoCameraOutlinedIcon from "@material-ui/icons/PhotoCameraOutlined";
 import Header from '../Header/Header';
 import axios from 'axios'
+import {fetchRegisterData} from '../../redux/slice/register'
 
 const Register = () => {
   const [data, setData] = useState({
