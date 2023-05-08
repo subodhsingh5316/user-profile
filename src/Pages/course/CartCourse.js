@@ -37,6 +37,7 @@ const CartCourse = () => {
     }, []);
     console.log("items", {...courseData})
     const BuySubmit = () => {
+        console.log("suble are you")
         if (items) {
             axios.put(`http://localhost:3001/posts/${userId.id}`, { ...courseData, status: true, name: items?.name })
             //axios.put(jasdkjfksadjfasdkjfksad/courses/couseId, {status: true. name: "Rohit"})
@@ -137,10 +138,10 @@ const CartCourse = () => {
 
                             {/* </Row> */}
                             <Row style={{ margin: '10%' }}>
-                                {/* {
-                                    btnLoading ?(
-                                        <Spinner/>
-                                    ):( */}
+                                {
+                                    byNowButton ?(
+                                        <Button onClick={()=>BuySubmit()} >Make Payment now</Button>
+                                    ):(
                                 <PayPalScriptProvider options={{ "client-id": "AXIbLclwmyMzuLwJJ4Z1PnuaC6BeJb8fG8Kp2y87sWplhbSWRZZn6TR3-gH6f604zsUpII9t7H_MWY59" }}>
                                     <PayPalButtons style={{ layout: "horizontal" }}
                                         // onClick={()=>BuySubmit()}
@@ -181,8 +182,8 @@ const CartCourse = () => {
                                         }}
                                     />
                                 </PayPalScriptProvider>
-                                 {/* )
-                                }  */}
+                                 )
+                                }  
                             </Row>
                         </Card>
                     </Col>

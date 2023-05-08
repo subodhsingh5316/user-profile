@@ -12,14 +12,15 @@ const StudentCourse = (props) => {
             setItems(...item);
         }
     }, []);
+    console.log("itemteacher",items?.name)
     //   console.log("123",items[0]?.name)
     return (
         <div>
             <Container>
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'Start' }}>
                     <>
-                        {
-                            data && data.filter((itemF, i) => itemF.name === items?.name && itemF.teacher==true)
+                        { 
+                            data && data.filter((itemF, i) => itemF.teacher_name === items?.name && itemF.teacher==true)
                                 .map((item, i) =>
                                 (
                                     <Card key={i} style={{ width: '18rem', margin: '1%' }}>

@@ -4,9 +4,8 @@
       "name": "subodh ray",
       "status": true,
       "teacher": true,
-      "teacher_name": "Pramod Ray",
-      "courseName": "React-js-1",
-      "author": "Munsi premchand-1",
+      "courseName": "React-js-2",
+      "author": "Ricky premchand-1",
       "price": 125,
       "lesson": [
         {
@@ -14,14 +13,15 @@
           "lessonName": "thbherf",
           "detail": "asfd",
           "lessonStatus": false,
-          "lesson_id": 1
+          "lesson_id": 2
         }
       ],
-      "id": 1
+      "id": 1,
+      "teacher_name": "Pramod Ray"
     },
     {
-      "name": "",
-      "status": false,
+      "name": "subodh ray",
+      "status": true,
       "teacher": false,
       "courseName": "React-js-2",
       "author": "Ricky premchand-1",
@@ -39,10 +39,10 @@
       "teacher_name": ""
     },
     {
-      "status": true,
+      "name": "",
+      "status": false,
       "teacher": false,
-      "name": "Pramod Ray",
-      "courseName": "React Native-ios",
+      "courseName": "React Native",
       "author": "Kazim",
       "price": 200,
       "lesson": [
@@ -54,7 +54,7 @@
           "lesson_id": 3
         }
       ],
-      "id": 3,
+      "id": 4,
       "teacher_name": ""
     },
     {
@@ -120,12 +120,20 @@
     {
       "AnsQyary": "fuyfuf",
       "id": 1
+    },
+    {
+      "AnsQyary": "asfsdgfdsg",
+      "id": 2
     }
   ],
   "quarry": [
     {
       "id": 1,
       "AnsQyary": "have i issue"
+    },
+    {
+      "internQuarry": "iam facing issue",
+      "id": 2
     }
   ],
   "register": [
